@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>You're Invited to Collabspace!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #c8e6c9); /* Light and fresh gradient */
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #3f51b5; /* A vibrant indigo */
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            color: #757575;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+        .greeting {
+            font-size: 1.2em;
+            color: #2196f3; /* A friendly blue */
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 18px;
+            color: #555;
+            text-align: left;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff9800; /* An energetic orange */
+        }
+        .icon {
+            font-size: 1.5em;
+            color: #3f51b5;
+            margin-right: 8px;
+        }
+        .regards {
+            margin-top: 30px;
+            font-style: italic;
+            color: #777;
+        }
+        .team-name {
+            color: #3f51b5;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="container">
+    <h1><i class="fas fa-users icon"></i> Welcome to Collabspace!</h1>
+    <p class="tagline">Unite, Innovate, Achieve Together.</p>
+
+    <p class="greeting">Hello <span class="highlight" th:text="${user}"></span>,</p>
+
+    <p><i class="fas fa-user-plus icon"></i> You've been invited by <span class="highlight" th:text="${owner}"></span> to join the workspace:</p>
+    <h2><i class="fas fa-code-branch icon"></i> <span class="highlight" th:text="${workspaceName}"></span></h2>
+
+    <p><i class="fas fa-info-circle icon"></i> This collaborative space is designed to help teams like ours work together seamlessly on projects, share ideas, and achieve common goals.</p>
+    <p><i class="fas fa-sign-in-alt icon"></i> To get started, simply log in to your account and navigate to the <span class="highlight">"Joined Workspaces"</span> section. You'll find <span class="highlight" th:text="${workspaceName}"></span> waiting for you.</p>
+    <p><i class="fas fa-handshake icon"></i> We encourage you to actively participate, share your insights, and collaborate effectively with your fellow team members. Let's build something amazing together!</p>
+
+    <p class="regards">Warm regards,</p>
+    <p class="regards"><span class="team-name">The Collabspace Team</span></p>
+</div>
+</body>
+</html>

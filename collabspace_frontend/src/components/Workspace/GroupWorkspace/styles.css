@@ -1,0 +1,25 @@
+/* Gradient background for dark theme */
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #1e1e2f 0%, #3b1e3b 50%, #4f46e5 100%);
+}
+
+/* Gradient background for cards in dark theme */
+.bg-gradient-card-dark {
+    background: linear-gradient(145deg, #2a2a40 0%, #4a2a4a 100%);
+}
+
+/* Gradient text effect for dark theme */
+.text-gradient-dark {
+    background: linear-gradient(90deg, #ff6bcb, #a78bfa);
+    -webkit-background-clip: text; /* Vendor prefix for WebKit browsers (Chrome, Safari) */
+    -moz-background-clip: text; /* Vendor prefix for Firefox (though rarely needed for text) */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent; /* Required for gradient text effect */
+}
+
+/* Gradient border effect for dark theme */
+.border-gradient-dark {
+    border: 2px solid transparent;
+    background: linear-gradient(145deg, #2a2a40, #2a2a40) padding-box,
+                linear-gradient(90deg, #ff6bcb, #a78bfa) border-box;
+}

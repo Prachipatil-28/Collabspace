@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Call Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: #4f46e5;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background: #4f46e5;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Video Call Invitation</h2>
+    </div>
+    <div class="content">
+        <p>Dear <span th:text="${user}">[User]</span>,</p>
+        <p>You have been invited to join a video call for the workspace "<span th:text="${workspaceName}">[Workspace Name]</span>".</p>
+        <p><strong>Room ID:</strong> <span th:text="${roomId}">[Room ID]</span></p>
+        <p><strong>Password:</strong> <span th:text="${password}">[Password]</span></p>
+        <p>Please use the above credentials to join the meeting via the platform.</p>
+        <p>
+            <a href="https://your-app-url.com/video-call" class="button">Join Video Call</a>
+        </p>
+    </div>
+    <div class="footer">
+        <p>Best regards,<br>The Collabspace Team</p>
+        <p>If you did not expect this email, please contact our support team.</p>
+    </div>
+</div>
+</body>
+</html>
